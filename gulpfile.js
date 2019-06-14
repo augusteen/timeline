@@ -30,7 +30,7 @@ gulp.task('build-js', () => gulp
   .pipe(plumber())
   .pipe(eslint())
   .pipe(eslint.format())
-  .pipe(eslint.failAfterError())
+  // .pipe(eslint.failAfterError())
   .pipe(babel({
     presets: ['env'],
   }))
