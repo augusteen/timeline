@@ -300,7 +300,7 @@ function timeline(collection, options) {
 
     // Create and add arrow controls to horizontal timeline
     function addNavigation(tl) {
-        if (tl.items.length > tl.settings.visibleItems) {
+        if (tl.items.filter((item) => item.classList.contains("abs")).length > tl.settings.visibleItems) {
             const prevArrow = document.createElement('button');
             const nextArrow = document.createElement('button');
             const topPosition = tl.items[0].offsetHeight;
